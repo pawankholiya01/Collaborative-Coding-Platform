@@ -118,8 +118,8 @@
     var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
 
-    {{!-- var socket = io.connect('https://livecodecollab.herokuapp.com/'); --}}
-    var socket = io.connect('http://localhost:3000/');
+    var socket = io.connect('https://livecodecollab.herokuapp.com/');
+    {{!-- var socket = io.connect('http://localhost:3000/'); --}}
 
     var editor = CodeMirror.fromTextArea(document.getElementById("code-screen"), {
         lineNumbers: true,
