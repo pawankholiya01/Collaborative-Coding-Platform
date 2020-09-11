@@ -11,6 +11,8 @@
 <link href = "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.css" rel='stylesheet'/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/theme/monokai.min.css" rel='stylesheet' />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/theme/abcdef.min.css" rel='stylesheet' />
+<link src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/addon/fold/foldcode.js" rel = 'stylesheet' />
+<link src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/addon/fold/brace-fold.min.js" rel = 'stylesheet' />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/theme/material-palenight.min.css" rel='stylesheet' />
 
 
@@ -107,27 +109,23 @@
 
 </div>
 
-
-
 <input type="hidden" value="{{roomID}}" id="roomID">
 <input type="hidden" value="{{user.name}}" id="user" >
-
-
-
-
 
 <script>
     var EditorClient = ot.EditorClient;
     var SocketIOAdapter = ot.SocketIOAdapter;
     var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
-    var socket = io.connect('https://livecodecollab.herokuapp.com/');
 
+    {{!-- var socket = io.connect('https://livecodecollab.herokuapp.com/'); --}}
+    var socket = io.connect('http://localhost:3000/');
 
     var editor = CodeMirror.fromTextArea(document.getElementById("code-screen"), {
         lineNumbers: true,
         mode: "text/x-c++src",
-        theme: "material-palenight"
+        theme: "material-palenight",
+        readOnly: false
         
     });
 

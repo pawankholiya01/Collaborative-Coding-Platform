@@ -37,7 +37,11 @@ module.exports = function (server) {
         });
 
         socket.on('disconnect', function () {
+            console.log("*******************************************************************");
+            console.log(socket)
+            console.log(socket.room)
             socket.leave(socket.room);
+            console.log("*******************************************************************");
         });
     })
 }
