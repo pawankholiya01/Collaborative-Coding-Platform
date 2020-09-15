@@ -5,12 +5,21 @@ var ot = require('ot');
 var roomList = {};
 
 module.exports = function (server) {
-    var str = '//Write your code here and collaborate in real time\n\n';
+    var str = `//Write your code here and collaborate in real time\n
+    
+    #include<iostream>
+    using namespace std;
+    int main()
+    {
+        string s;
+        cin>>s;
+        cout<<"Holla "<<s<<endl;
+    }`;
 
 
     var io = socketIO(server);
     io.on('connection', function (socket) {
-        console.log(socket);
+        // console.log(socket);
         console.log("connected");
 
         socket.on('joinRoom', function (data) {
@@ -38,7 +47,7 @@ module.exports = function (server) {
 
         socket.on('disconnect', function () {
             console.log("*******************************************************************");
-            console.log(socket)
+            // console.log(socket)
             console.log(socket.room)
             socket.leave(socket.room);
             console.log("*******************************************************************");
