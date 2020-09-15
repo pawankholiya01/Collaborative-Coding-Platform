@@ -11,7 +11,7 @@ For implementing the concurrent edits and realtime colaboration I have used `Ope
 
 .
 
-![](result2.gif)
+![](https://raw.githubusercontent.com/pawankholiya01/Live-Code-Collab/master/result2.gif)
 
 For any `suggesstions` , `issues` and `collaborations` write to me at [pawan.kholiya01@gmail.com](mailto:pawan.kholiya01@gmail.com) . I will be more than happy to hear from you.
 ## Features :
