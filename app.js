@@ -1,4 +1,4 @@
-const sessionKey = 'Pawan';
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,16 +7,18 @@ var logger = require('morgan');
 var hbs = require('express-hbs');
 var bodyParser = require('body-parser')
 var expressValidator = require('express-validator');
+const dotenv = require('dotenv');
+
 
 
 
 var mongoose = require('mongoose');
 var passport = require('passport');
 var session = require('express-session');
-
+dotenv.config();
 require('./passport')
-
-const dbConnstring =  'mongodb+srv://pawan:kholiy%40kholiy%40@cluster0.3ntm6.gcp.mongodb.net/colab?retryWrites=true&w=majority';
+const sessionKey = process.env.key;
+const dbConnstring =  process.env.databaseCluster;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
