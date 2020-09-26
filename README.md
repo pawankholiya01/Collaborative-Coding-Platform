@@ -5,7 +5,7 @@
 
 Collab with your friends, colleagues and code together in realtime!. 
 
-You can use it to `conduct interviews`, help your friend by `debuging code together`, `explaining the working of code practically` and much more. Basically it makes learning programming together much easy and fun!.
+You can use it to `conduct interviews`, help your friend by `debugging code together`, `explaining the working of code practically` and much more. Basically it makes learning programming together much easy and fun!.
 
 For implementing the concurrent edits and realtime colaboration I have used `Operational Transformations` and `socket.io` for chatting and syncing the code file. 
 
@@ -27,7 +27,7 @@ For any `suggestions` , `issues` and `collaborations` write to me at [pawan.khol
 
 ## Specifications Features :
 
-  - **BackEnd  :** Express js is used to create the backend, and `passport-local` for user-authenticaltion.
+  - **BackEnd  :** Express js is used to create the backend, and `passport-local` for user-authentication.
   - **Database :** Used `mongoose` for modelling **mongo DB** and has used `mongoDB Cloud Atlas` for storage of user data and the collabs created.
   - **Operational Transformations :** is an algorithmic technique for realtime collaborative editing of simpler to complex documents. [Read more here!](http://operational-transformation.github.io/) . Library for Operational Transformations [ot.js](https://github.com/Operational-Transformation/ot.js/).
   
